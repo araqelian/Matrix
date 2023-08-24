@@ -30,9 +30,9 @@ if __name__ == "__main__":
 
         print("\033[92m check transpose of a matrix (transpose)\033[00m")
         
-        m5 = Matrix([[1, 2, 3], [4, 5, 6]])
+        m5 = Matrix([[1, 2], [4, 5, 6]])
         result = m.transpose()
         print(result)
 
     except Exception as err:
-        print(err)
+        print('\033[91m{} \033[91m'.format(err))

@@ -8,7 +8,7 @@ class Matrix:
 
         for line in self.matrix:
             if len(line) != self.columns:
-                raise TypeError("All columns of the matrix must be equal to each other.")
+                raise TypeError("Error!\nAll columns of the matrix must be equal to each other.")
 
     def __add__(self, other: "Matrix") -> "Matrix":
         if self.rows == other.rows and self.columns == other.columns:
@@ -21,7 +21,7 @@ class Matrix:
 
             return Matrix(result)
         else:
-            raise ValueError("Matrix dimensions are not compatible for addition.")
+            raise ValueError("Error!\nMatrix dimensions are not compatible for addition.")
 
     def __str__(self) -> str:
         str_matrix = ""
@@ -59,9 +59,9 @@ class Matrix:
 
                     return Matrix(result)
                 else:
-                    raise ValueError("Matrix dimensions are not compatible for multiplication.")
+                    raise ValueError("Error!\nMatrix dimensions are not compatible for multiplication.")
 
-            raise TypeError("Unsupported operand type for multiplication.")
+            raise TypeError("Error!\nUnsupported operand type for multiplication.")
 
     def __matmul__(self, other: "Matrix") -> "Matrix":
         return self.__mul__(other)
