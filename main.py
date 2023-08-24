@@ -2,20 +2,20 @@ from Matrix import Matrix
 
 if __name__ == "__main__":
     try:
-        print("\033[92m check printing matrix object (__str__)\033[00m")
+        print("\033[92mPrinting matrix object (__str__)\033[00m")
 
         m = Matrix([[1, 2], [3, 4]])
         print(m, end='\n\n')
 
 
-        print("\033[92m check matrix addition (__add__)\033[00m")
+        print("\033[92mMatrix addition (__add__)\033[00m")
         m1 = Matrix([[1, 2], [3, 4]])
         m2 = Matrix([[5, 6], [7, 8]])
         result = m1 + m2
         print(result, end='\n\n')
 
 
-        print("\033[92m check scalar multiplication and matrix multiplication (__mul__ and __matmul__)\033[00m")
+        print("\033[92mScalar multiplication and matrix multiplication (__mul__ and __matmul__)\033[00m")
         
         
         m3 = Matrix([[1, 2], [3, 4]])
@@ -28,10 +28,10 @@ if __name__ == "__main__":
 
 
 
-        print("\033[92m check transpose of a matrix (transpose)\033[00m")
+        print("\033[92mTranspose of a matrix (transpose)\033[00m")
         
-        m5 = Matrix([[1, 2], [4, 5, 6]])
-        result = m.transpose()
+        m5 = Matrix([[1, 2, 3], [4, 5, 6]])
+        result = m5.transpose()
         print(result)
 
     except Exception as err:

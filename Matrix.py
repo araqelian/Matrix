@@ -10,6 +10,7 @@ class Matrix:
             if len(line) != self.columns:
                 raise TypeError("Error!\nAll columns of the matrix must be equal to each other.")
 
+
     def __add__(self, other: "Matrix") -> "Matrix":
         if self.rows == other.rows and self.columns == other.columns:
             result = []
@@ -23,6 +24,7 @@ class Matrix:
         else:
             raise ValueError("Error!\nMatrix dimensions are not compatible for addition.")
 
+
     def __str__(self) -> str:
         str_matrix = ""
         for el in self.matrix:
@@ -30,6 +32,7 @@ class Matrix:
             str_matrix += "\n"
 
         return str_matrix
+
 
     def __mul__(self, other: Union["Matrix", int, float]) -> "Matrix":
 
@@ -63,8 +66,10 @@ class Matrix:
 
             raise TypeError("Error!\nUnsupported operand type for multiplication.")
 
+
     def __matmul__(self, other: "Matrix") -> "Matrix":
         return self.__mul__(other)
+
 
     def transpose(self) -> "Matrix":
         result = []
