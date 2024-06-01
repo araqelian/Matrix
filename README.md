@@ -1,4 +1,4 @@
-# 👩‍🏫 Matrix Implementation in Python
+<h1 align="center"> 👩‍🏫 Matrix Implementation in Python </h1>
 
 <br>
 
